@@ -1,0 +1,22 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS Exercise1</title>
+	<script>
+		var weekdays = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"] // these are days of the week
+		var userNumber = prompt("Enter a day of the week");
+		var ifIN = weekdays.indexOf(userNumber.toLowerCase()); //converts user input to lowercase and checks if the input is in the list
+		if (ifIN < 0) { // if 'ifIN' is -1 - means it is not in array
+		  alert("It's not a day of the week, please reenter")
+		} else if (ifIN == 6 || ifIN == 0){
+		  alert(`You can sleep in on ${userNumber}`); //interpolate user's input
+		} else {
+		  alert(`You have to go to work on ${userNumber}`); 
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
