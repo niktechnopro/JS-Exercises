@@ -2,61 +2,49 @@
 <html>
 <head>
 <title>Dom Experiment - Tip Calculator</title>
+<meta name="description" content="Quick and Simple bill+tip calculator">
 <style>
     #wrapper {
         width: 50%;
         margin: 0 auto;
         border: 3px solid aqua;
+        border-radius: 10px;
     }
     
     #form {
         text-align: center;
     }
     
-    h3 {
+    h3, #total {
         text-align: center;
         color: rebeccapurple;
     }
     
-    #bill {
+    #bill, #tip {
         background-color: aqua;
         font-size: 16px;
+        border-radius: 5px;
+        -webkit-transition: all 300ms ease-in-out; /*that should ensure that transtion works on all browsers*/
+        -moz-transition: all 300ms ease-in-out;
+        -o-transition: all 300ms ease-in-out;
     }
     
-    #bill:hover {
-        background-color:aliceblue;
-    }
-    
-    #tip {
-        background-color: aqua;
-        font-size: 16px;
-    }
-    
-    #tip:hover {
+    #bill:hover, #tip:hover {
         background-color: aliceblue;
     }
-    #number_of_people{
+    #number_of_people, #calculate{
         font-size: 16px;
         background-color: azure;
+        border-radius: 5px;
+        -webkit-transition: all 300ms ease-in-out;
+        -moz-transition: all 300ms ease-in-out;
+        -o-transition: all 300ms ease-in-out;
     }
     
-    #number_of_people:hover {
+    #number_of_people:hover, #calculate:hover {
         background-color: aqua;
     }
     
-    #calculate {
-        background-color: azure;
-        font-size: 16px;
-    }
-    
-    #calculate:hover {
-        background-color: aqua;
-    }
-    
-    #total {
-        text-align: center;
-        color: rebeccapurple;
-    }
 </style>
     
     <script type="text/javascript">
@@ -94,7 +82,7 @@
         </select>
         <button id = "calculate" type="submit" onclick = "splitAmount(bill.value, tip.value, number_of_people.value);">calculate</button> 
     </div>
-    <h3>your bill is: <span id = "total"></span> $</h2>
+    <h3>your bill is: <span id = "total"></span> $</h3>
 </div>    
 
 </body>
